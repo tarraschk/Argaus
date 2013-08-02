@@ -1,15 +1,23 @@
 # humanstxt.org/
 # The humans responsible & technology colophon
 
-# TEAM
+/* TEAM */
+CoFounder & CEO/CTO: Maxime Alay-Eddine
+Contact: maxime [at] argaus.fr
+Twitter: @tarraschk
+From: Paris, France.
 
-    <name> -- <role> -- <twitter>
+CoFounder & Sales Director: Gauthier Blin
+Contact: gauthier [at] argaus.fr
+From: Lyon, France.
 
-# THANKS
+/* THANKS */
+Jean-Jacques York, who helped me to focus on what is important in a company.
+My parents, without whom this project couldn't exist.
 
-    <name>
-
-# TECHNOLOGY COLOPHON
-
-    HTML5, CSS3
-    Normalize.css, jQuery, Modernizr
+/* SITE */
+Last update: 2013/08/01
+Standards: HTML5, CSS3, Javascript
+Components: Modernizr, jQuery, Bootstrap.
+Software: Coda 2, Notepad++, FileZilla, Photoshop
+Language: French / English / Deutsch
