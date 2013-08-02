@@ -98,9 +98,6 @@ textarea {
             margin: 0;
             padding: 0;
         }
-        * {
-            border: solid black 1px;
-        }
         #bg-fixed {
             position: relative;
             width: 100%;
