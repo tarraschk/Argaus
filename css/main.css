@@ -98,6 +98,9 @@ textarea {
             margin: 0;
             padding: 0;
         }
+        * {
+            border: solid black 1px;
+        }
         #bg-fixed {
             position: relative;
             width: 100%;
@@ -159,12 +162,13 @@ textarea {
             height: 50px;
             display: block;
             text-align: center;
+            width:100%;
+        }
+        .footer-container{
             left: 50%;
+            height: 50px;
         }
         .footer-content{
-            position: relative;
-            left: -50%;
-            height: 50px;
         }
 
 
