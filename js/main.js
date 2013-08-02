@@ -2,29 +2,24 @@ var bgfixed = $('#bg-fixed');
 var menu = $('#menu');
 var menuButtons = menu.find('li a');
 var content = $('#content');
+var ghost = $('#bg-ghost-area');
 
-function switchMode() {
-        if(menu.hasClass('top')) {
-            menu.removeClass('top');
-            content.removeClass('top');
-        } else {
-            menu.addClass('top');
-            content.addClass('top');
-        }
-}
 
 $(document).load(function() {
 });
 $(document).ready(function() {
-    menu.on('click', '.invert', function () {
-        switchMode();
+    $(window).scroll(function() {
+         if ($(window).scrollTop() > $(window).height() - 50) {
+            menu.addClass('top');
+         }
+         else {
+            menu.removeClass('top');
+         }
     });
-    bgfixed.on('mouseover', '#bg-logo', function () {
-        switchMode();
-        menuButtons.first().addClass('active');
-    });
-    menu.on('click', 'a', function () {
-        menuButtons.removeClass('active');
-        $(this).addClass('active');
-    });
+$('a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top - 50
+    }, 800);
+    return false;
+});
 });
