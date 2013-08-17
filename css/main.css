@@ -134,7 +134,7 @@ textarea {
         #menu.top {
             position: fixed;
             float:left;
-            top: 0px;
+            top: -3px;
         }
         #content {
             position: absolute;
