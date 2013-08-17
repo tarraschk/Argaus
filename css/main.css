@@ -104,18 +104,19 @@ textarea {
             height: calc(100% - 50px);
         }
         #bg-logo-container{
-            left: 50%;
-            top: 50%;
             position: fixed;
+            margin:auto;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
         }
-        #bg-logo {
-            border: solid black 1px;
+        #bg-logo-container img{
+            display: block;
             position: relative;
-            left: -50%;
-            top: -50%;
-            width: 100%;
-            height: 100%;
-            text-align: center;
+            width: 80%;
+            margin-top: 20%;
+            margin-left: 10%;
         }
         #menu {
             position: absolute;
