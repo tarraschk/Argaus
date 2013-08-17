@@ -102,6 +102,8 @@ textarea {
             position: relative;
             width: 100%;
             height: calc(100% - 50px);
+            height: -moz-calc(100% - 50px);
+            height: -webkit-calc(100% - 50px);
         }
         #bg-logo-container{
             position: fixed;
@@ -125,6 +127,8 @@ textarea {
             height: 50px;
             width: 100%;
             top: calc(100% - 50px);
+            top: -moz-calc(100% - 50px);
+            top: -webkit-calc(100% - 50px);
             left: 0px;
             background:#fff;
             border-top: 3px solid #000;
@@ -139,7 +143,7 @@ textarea {
         #content {
             position: absolute;
             background: white;
-            top: calc(100%);
+            top: 100%;
             width: 100%;
             height: 4658px;
             left:0px;
