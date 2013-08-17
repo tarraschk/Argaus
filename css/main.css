@@ -127,7 +127,7 @@ textarea {
             top: calc(100% - 50px);
             left: 0px;
             background:#fff;
-            border-top:1px solid #000;
+            border-top:4px solid #000;
             border-bottom:4px solid #000;
             overflow: hidden;
         }
