@@ -1,6 +1,6 @@
 var bgfixed = $('#bg-fixed');
 var menu = $('#menu');
-var menuButtons = menu.find('li a');
+var menuButtons = $('#menu ul.nav li');
 var content = $('#content');
 var ghost = $('#bg-ghost-area');
 
@@ -14,13 +14,14 @@ $(document).ready(function() {
          }
          else {
             menu.removeClass('top');
+            menuButtons.removeClass('active');
          }
     });
 $('a').click(function(){
     $('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top - 50
     }, 800);
-    $('ul.nav li').removeClass('active');
+    menuButtons.removeClass('active');
     $(this).parent('li').addClass('active');
     return false;
 });
