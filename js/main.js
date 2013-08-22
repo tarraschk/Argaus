@@ -21,7 +21,6 @@ $(document).ready(function() {
          }
     });
     menuCollapsible.on('show.bs.collapse', function () {
-        console.log("eh");
         if ($(window).scrollTop() < $(window).height() - 50) {
             $('html, body').animate({
                 scrollTop: $("#option1").offset().top - 50
