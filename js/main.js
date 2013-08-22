@@ -23,8 +23,6 @@ $('a').click(function(){
     $('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top - 50
     }, 800);
-    menuButtons.removeClass('active');
-    $(this).parent('li').addClass('active');
     return false;
 });
 });
