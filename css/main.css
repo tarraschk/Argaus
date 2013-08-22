@@ -124,7 +124,6 @@ textarea {
         }
         #menu {
             position: absolute;
-            height: 50px;
             width: 100%;
             top: calc(100% - 50px);
             top: -moz-calc(100% - 50px);
