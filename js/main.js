@@ -11,7 +11,8 @@ $(document).ready(function() {
     $(window).scroll(function() {
          if ($(window).scrollTop() > $(window).height() - 50) {
             menu.addClass('top');
-            menuButtons.first().addClass('active');
+            if(menuButtons.parent().find(".active").size() === 0)
+                menuButtons.first().addClass('active');
          }
          else {
             menu.removeClass('top');
