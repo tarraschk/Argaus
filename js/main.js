@@ -21,6 +21,7 @@ $(document).ready(function() {
          }
     });
     menuCollapsible.on('show.bs.collapse', function () {
+        console.log("eh");
         if ($(window).scrollTop() < $(window).height() - 50) {
             $('html, body').animate({
                 scrollTop: $("#option1").offset().top - 50
@@ -28,10 +29,11 @@ $(document).ready(function() {
         }
     });
     menu.find('a').click(function(){
+        if(menuCollapsible.hasClass('in'))
+            menuCollapsible.collapse('hide');
         $('html, body').animate({
-            scrollTop: $( $.attr(this, 'href') ).offset().top - 50
+            scrollTop: $( $.attr(this, 'href') ).offset().top - 45
         }, 800);
-        menuCollapsible.collapse('hide');
         return false;
     });
 });
