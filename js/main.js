@@ -27,8 +27,6 @@ $(document).ready(function() {
             }, 800);
         }
     });
-    menuCollapsible.on('hide.bs.collapse', function () {
-    });
     menu.find('a').click(function(){
         $('html, body').animate({
             scrollTop: $( $.attr(this, 'href') ).offset().top - 50
