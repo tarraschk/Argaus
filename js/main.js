@@ -1,6 +1,7 @@
 var bgfixed = $('#bg-fixed');
 var menu = $('#menu');
 var menuButtons = $('#menu ul.nav li');
+var menuCollapsible = $('.navbar-collapse');
 var content = $('#content');
 var ghost = $('#bg-ghost-area');
 
@@ -19,10 +20,11 @@ $(document).ready(function() {
             menuButtons.removeClass('active');
          }
     });
-$('a').click(function(){
+$('#menu a').click(function(){
     $('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top - 50
     }, 800);
+    menuCollapsible.collapse('hide');
     return false;
 });
 });
