@@ -27,6 +27,13 @@ $(document).ready(function() {
             }, 800);
         }
     });
+    menuCollapsible.on('hide.bs.collapse', function () {
+        if ($(window).scrollTop() < $(window).height() - 50) {
+            $('html, body').animate({
+                scrollTop: $("#option1").offset().top - 50
+            }, 800);
+        }
+    });
     menu.find('a').click(function(){
         $('html, body').animate({
             scrollTop: $( $.attr(this, 'href') ).offset().top - 50
