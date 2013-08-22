@@ -20,6 +20,8 @@ $('a').click(function(){
     $('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top - 50
     }, 800);
+    $('ul.nav li').removeClass('active');
+    $(this).parent('li').addClass('active');
     return false;
 });
 });
