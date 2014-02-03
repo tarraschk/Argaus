@@ -4,6 +4,14 @@ var menuButtons = $('#menu ul.nav li');
 var menuCollapsible = $('.navbar-collapse');
 var content = $('#content');
 var ghost = $('#bg-ghost-area');
+var logo = $('#bg-logo-container img');
+
+var map = L.mapbox.map('map', 'tarraschk.gm6bpp19', {
+    scrollWheelZoom: false,
+    shareControl: true
+})
+    .setView([45.7762, 4.8615], 13)
+    .addControl(L.mapbox.geocoderControl('tarraschk.gm6bpp19'));
 
 
 $(document).load(function() {
@@ -23,7 +31,7 @@ $(document).ready(function() {
     menuCollapsible.on('show.bs.collapse', function () {
         if ($(window).scrollTop() < $(window).height() - 50) {
             $('html, body').animate({
-                scrollTop: $("#option1").offset().top - 50
+                scrollTop: $("#presentation").offset().top - 50
             }, 800);
         }
     });
@@ -35,4 +43,15 @@ $(document).ready(function() {
         }, 800);
         return false;
     });
+    $('#grid').grid();
+	map.markerLayer.on('ready', function(e) {
+	    map.markerLayer.eachLayer(function(marker) {
+	        // you can replace this test for anything else, to choose the right
+	        // marker on which to open a popup. by default, popups are exclusive
+	        // so opening a new one will close all of the others.
+	        if (marker.feature.properties.title === 'S.A.S. ARGAUS') {
+	            marker.openPopup();
+	        }
+	    });
+	});
 });
