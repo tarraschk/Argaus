@@ -37,7 +37,7 @@ $(document).ready(function() {
       },
       error: function(response)
       {
-        contactForm.addAjaxMessage(response.message, true);
+        contactForm.addAjaxMessage(JSON.parse(response.responseText).message, true);
       }
    });
     return false;

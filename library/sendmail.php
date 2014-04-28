@@ -31,7 +31,7 @@
     $message_body = "";
     foreach ($fields_req as $name => $required) {
       if ($required && empty($name)) {
-        errorResponse("$name is empty.");
+        errorResponse("$name est vide.");
       } else {
         $message_body .= ucfirst($name) . ":  " . $_POST[$name] . "\n";
       }
@@ -44,14 +44,14 @@
   header('Content-type: application/json');
   //do some simple validation. this should have been validated on the client-side also
   if (empty($email)) {
-  	errorResponse('Email or message is empty.');
+  	errorResponse('Email ou message est vide.');
   }
 
   //do Captcha check, make sure the submitter is not a robot:)...
   include_once './vender/securimage/securimage.php';
   $securimage = new Securimage();
   if (!$securimage->check($_POST['captcha_code'])) {
-    errorResponse('Invalid Security Code');
+    errorResponse('Le code de sécurité est invalide.');
   }
 
   //try to send the message
